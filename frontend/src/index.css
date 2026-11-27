@@ -1,0 +1,177 @@
+/* ====================================================================
+   HOTEL MANAGEMENT SYSTEM - LUXURY DARK & GOLD ROYAL THEME
+   ==================================================================== */
+
+:root {
+  /* Rich Obsidian Dark Palette */
+  --bg-deep: #070a12;
+  --bg-main: #0a0f1d;
+  --bg-surface: #10172a;
+  --bg-surface-elevated: #162038;
+  --bg-surface-hover: #1c2846;
+
+  /* Radiant Metallic Gold Palette */
+  --gold-primary: #d4af37;
+  --gold-light: #fef08a;
+  --gold-bright: #fbbf24;
+  --gold-amber: #f59e0b;
+  --gold-dark: #996515;
+  --gold-gradient: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #996515 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(153, 101, 21, 0.05) 100%);
+  --gold-glow: 0 0 25px rgba(212, 175, 55, 0.28);
+  --gold-border: rgba(212, 175, 55, 0.24);
+  --gold-border-hover: rgba(212, 175, 55, 0.65);
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-gold: #fde047;
+
+  /* Accents */
+  --emerald-accent: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.2);
+  --rose-accent: #f43f5e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(180, 83, 9, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #070a12 0%, #0a0f1d 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ====================================================================
+   LUXURY ANIMATIONS & EFFECTS
+   ==================================================================== */
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.25), inset 0 0 8px rgba(212, 175, 55, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(212, 175, 55, 0.55), inset 0 0 16px rgba(212, 175, 55, 0.25);
+  }
+}
+
+@keyframes heroBorderGlow {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.35);
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85), 0 0 25px rgba(212, 175, 55, 0.15), inset 0 1px 0 rgba(254, 240, 138, 0.3);
+  }
+  50% {
+    border-color: rgba(254, 240, 138, 0.65);
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.95), 0 0 40px rgba(212, 175, 55, 0.32), inset 0 1px 0 rgba(254, 240, 138, 0.5);
+  }
+}
+
+@keyframes royalFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes liveDotGlow {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Luxury Gold Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #78350f 100%);
+  border-radius: 9999px;
+  border: 1px solid #070a12;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
